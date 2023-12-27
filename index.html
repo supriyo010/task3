@@ -1,155 +1,24 @@
-<!-- This Web page is made by Bhupesh Prajapati for Task 2- AGT Internship -->
-<!-- output is a Multiticket modal which is responsive to every screen size -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>ATG Task2</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <!--My style and JS Script-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="code.js"></script>
+    <title>Your Webpage</title>
 </head>
-
 <body>
-    <div class="container">
-        <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-openModal btn-info btn-lg" data-toggle="modal"
-            data-target="#payment">Event</button>
-            <p>This is added int the first branch trial. sir please accept theese changes and merge these in the master branch.</p>
 
-        <!-- Modal Event Type-->
-        <div class="modal fade" id="payment" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div style="margin-top:0px" class="modal-header">
-                        <i data-dismiss="modal" class="fa fa-close" aria-hidden="true" id="close"></i>
-                        <h4 class="modal-title">Event Type</h4>
-                    </div>
-                    <div class="modal-body  outer">
-
-                        <form action="">
-                            <div class="container-fluid">
-                                <p class="que">Paid-event or free-event?</p>
-                                <div class="row">
-                                    <div class="col-md-5 col-sm-5 col-xs-5" id="div1">
-                                        <div class="form-check custom-control custom-radio">
-                                            <label style="font-size: 20px;">
-                                                <input type="radio" name="choice" id="paid" value="paid" unchecked>
-                                                <span class="label-text"></span>
-                                            </label>
-                                            <input class=" form-check-input" type="radio" name="choice" id="paid"
-                                                value="paid" unchecked>
-                                            <div class="imgtxt">
-                                                <img class="center  img" src="paid.png" alt="Paid">
-                                                <p class="text-center">PAID</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 col-sm-5 col-xs-5" id="div2">
-                                        <div class="form-check ">
-                                            <label style="font-size: 20px;">
-                                                <input type="radio" name="choice" id="free" value="free" unchecked>
-                                                <span class="label-text"></span>
-                                            </label>
-                                            <!-- <input class="form-check-input hidden" type="radio" name="choice" id="free"
-                                                value="free" unchecked>
-                                            -->
-                                            <div class="imgtxt">
-                                                <img class="center img" src="free.png" alt="Free">
-                                                <p class="text-center">FREE</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <!--Next button of Modal 1-->
-                    <div class="modal-footer ">
-                        <button id="nb" type="button" class="btn btn-default nextButton disabled"><b>Next </b><i
-                        style="font-size:15px;margin-left: 5px;"
-                        class="fa fa-long-arrow-alt-right "></i></button>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <form id="myForm">
+        <label for="username"><b>Type in:</b></label>
+        <div class="input-container px-5">
+            <input type="text" id="username" name="username" class="input-large input-icon-left gap-10" placeholder="Type here" required>
+            <span class="icon"></span>
         </div>
-        <!--Second Modal-->
+        <button type="submit" id="submitBtn" class="button-primary">Submit</button>
+    </form>
+  </div>
 
-        <!-- Modal Event Type-->
-        <div class="modal fade" id="modal2" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div style="margin-top:0px" class="modal-header">
-                        <i id="backButton" class="fa fa-arrow-left" aria-hidden="true"></i>
-                        <h4 class="modal-title">Paid Event</h4>
-                    </div>
-                    <div class="modal-body  outer">
-
-                        <form action="">
-                            <div class="container-fluid">
-                                <p class="que">Single-cost event or multiple-cost event? <i class="fa fa-info"></i></p>
-                                <div class="row">
-                                    <div class="col-md-5 col-sm-5 col-xs-5" id="div3">
-                                        <div class="form-check custom-control custom-radio">
-                                            <label style="font-size: 20px;">
-                                                <input type="radio" name="choice2" id="scost" value="scost" checked>
-                                                <span class="label-text"></span>
-                                            </label>
-
-                                            <!--  <input class=" form-check-input" type="radio" name="choice2" id="scost"
-                                                value="scost" checked>
-                                            -->
-                                            <div class="imgtxt">
-                                                <img class="center img-fluid img " src="scost.png" alt="scost">
-                                                <p class="text-center">SINGLE COST</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-5 col-sm-5 col-xs-5" id="div4">
-                                        <div class="form-check ">
-                                            <label style="font-size: 20px;">
-                                                <input type="radio" name="choice2" id="mcost" value="mcost" unchecked>
-                                                <span class="label-text"></span>
-                                            </label>
-
-                                            <!-- <input class="form-check-input" type="radio" name="choice2" id="mcost"
-                                                value="mcost" unchecked>
-                                           -->
-                                            <div class="imgtxt">
-                                                <img class="center img-fluid img" src="mcost.png" alt="mcost">
-                                                <p class="text-center">MULTIPLE COST</p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2"></div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer" style="padding:50px 0px 20px 0px">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <script src="code.js"></script>
 </body>
-
 </html>

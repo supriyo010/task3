@@ -1,139 +1,74 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #ccc;
+    --font-size-large: 18px;
+    --padding-large: 12px;
+    --margin-large: 8px;
+    background-color: #34d13c;
+}
+.body{
+    background-color: rgb(101, 151, 1);
+}
 
-.form-field-length-80{
-    width:80%;
-}
-.form-field-length-50{
-    width:50%;
-}
-.form-field-length-60{
-    width:60%;
-}
-.btn-openModal{
-    margin: 15px;
-}
-.fa-close{
-    font-size:20px;
-}
-.outer{
-margin: 20px 80px 20px 30px;
-}
-.modal-title {
-  font-size: 20px;
-    margin-left: 10px;
-    font-weight: bold;
-    margin-top: -20px;
-    padding-left:15px;
-    display: inline-block;
-}
-.que{
-    font-size: 20px;
-}
-.nextButton {
-    width:100px;
-    height:35px;
-    color:white;
-    background-color: rgb(17, 106, 223);
-    float: right;
-    margin: 0px;   
-}
-#payment #modal2{
+.container {
+    text-align: center;
     margin-top: 50px;
 }
-.modal_container{
-    margin: 27px 0px 0px 27px;
-}
-.img{
-    height: 60px;
-    width: 70px;
+
+label {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: var(--margin-large);
 }
-.imgtxt{
-    margin-top: -25px;
+
+.input-container {
+    position: relative;
 }
-.form-check-input{
-    float: right;
+
+input {
+    font-size: var(--font-size-large);
+    padding: var(--padding-large);
+    margin-bottom: var(--margin-large);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    width: calc(100% - 30px);
 }
-.col-md-5{
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(212, 212, 212);
-    margin:10px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-.selected-box{
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgb(101, 161, 209);
-    margin:10px;
-    border-radius: 5px;
-    font-weight: bold;
-    background-color:rgb(241, 248, 253); 
-}
-.fa-info{
-   font-size: 11px;
-    border-radius: 100px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: grey;
-    padding:3px 7px 3px 7px;
-    color: grey;
-    margin:5px ;
+
+.input-container .icon {
     position: absolute;
-    display: inline-block;
-}
-/*tooltip customization*/
-.fa-info + .tooltip > .tooltip-inner {
-    text-align: left;
-    padding: 10px;
-    border-radius:0px;
-  }
-  
-/*custom Radio buttons*/
-
-
-label{
-	position: relative;
-	cursor: pointer;
-	color:  rgb(212, 212, 212);
-	font-size: 25px;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--secondary-color);
+    row-gap: 5;
 }
 
-input[type="checkbox"], input[type="radio"]{
-	position: absolute;
-	right: 9000px;
+input:hover {
+    border-color: var(--primary-color);
 }
 
-/*Radio box*/
-
-input[type="radio"] + .label-text:before{
-	content: "\f10c";
-	font-family: "FontAwesome";
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing:antialiased;
-	width: 1em;
-	display: inline-block;
-	margin: 0px 0px -30px 148px;
+input:focus {
+    border-color: var(--primary-color);
 }
 
-input[type="radio"]:checked + .label-text:before{
-	content: "\f192";
-	color: #2773d6;
-	animation: effect 250ms ease-in;
+button {
+    font-size: var(--font-size-large);
+    padding: var(--padding-large);
+    margin-bottom: var(--margin-large);
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-input[type="radio"]:disabled + .label-text{
-	color: #aaa;
+button:hover {
+    background-color: #2980b9;
 }
 
-input[type="radio"]:disabled + .label-text:before{
-	content: "\f111";
-	color: #ccc;
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
